@@ -2,9 +2,9 @@
 Class Personnage {
 
     private static $max_vie = 120;
-    private $vie;
-    private $atk;
-    private $nom;
+    protected $vie;
+    protected $atk;
+    protected $nom;
 
     public function __construct($nom, $atk, $vie){
         $this->nom = $nom;
@@ -34,7 +34,7 @@ Class Personnage {
 
 
 
-    private function empecher_negatif(){
+    protected function empecher_negatif(){
         if($this->vie < 0){
             $this->vie = 0;
         }
